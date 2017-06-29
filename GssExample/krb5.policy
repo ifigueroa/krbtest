@@ -1,0 +1,13 @@
+keystore ".keystore";
+
+grant /* GssExample program */ {
+
+        permission java.net.SocketPermission "ldap.itc.intrinsyc.com", "connect";
+
+        permission javax.security.auth.AuthPermission "createLoginContext.GssExample";
+        permission javax.security.auth.AuthPermission "doAs";
+
+        permission java.net.SocketPermission "kerberos.itc.intrinsyc.com", "connect";
+        permission javax.security.auth.kerberos.ServicePermission "krbtgt/ITC.INTRINSYC.COM@ITC.INTRINSYC.COM", "initiate";
+        permission javax.security.auth.kerberos.ServicePermission "ldap/YVRDC04.itc.intrinsyc.com@ITC.INTRINSYC.COM", "initiate";
+};
